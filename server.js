@@ -29,11 +29,14 @@ mongoose
 
 
 
-//Passoport middleware for private routes
-//app.use(passport.initialize());
+// Passport middleware
+app.use(passport.initialize());
 
-//Passport config
-//require('./config/passport')(passport);
+// Passport Config
+require('./config/passport')(passport);
+
+
+
 //Use Routes
 app.use('/api/users', users);
 app.use('/api/todo', todo);
