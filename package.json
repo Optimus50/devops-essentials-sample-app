@@ -1,44 +1,40 @@
 {
    "name": "devops-essentials-sample-app",
    "version": "1.0.0",
-   "description": " A full stack application",
-   "main": "webpack.config.js",
+   "description": "",
+   "main": "server.js",
    "scripts": {
-      "dev": "webpack-dev-server --open",
-      "start": "webpack"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "server": "nodemon server.js",
+      "client": "npm start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\""
    },
    "repository": {
       "type": "git",
       "url": "git+https://github.com/Optimus50/devops-essentials-sample-app.git"
    },
    "keywords": [],
-   "author": "",
-   "license": "ISC",
+   "author": " Benard Obhade",
+   "license": "MIT",
    "bugs": {
       "url": "https://github.com/Optimus50/devops-essentials-sample-app/issues"
    },
    "homepage": "https://github.com/Optimus50/devops-essentials-sample-app#readme",
-   "devDependencies": {
-      "@babel/cli": "^7.4.3",
-      "@babel/core": "^7.4.3",
-      "@babel/node": "^7.2.2",
-      "@babel/preset-env": "^7.4.3",
-      "@babel/preset-react": "^7.0.0",
-      "@babel/register": "^7.4.0",
-      "babel-loader": "^8.0.5",
-      "eslint": "^5.16.0",
-      "webpack": "^4.29.6",
-      "webpack-cli": "^3.3.0",
-      "webpack-dev-server": "^3.3.0"
-   },
    "dependencies": {
+      "bcrypt": "^3.0.5",
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.18.3",
       "concurrently": "^4.1.0",
-      "cross-env": "^5.2.0",
-      "highground": "^1.0.9",
-      "jest": "^24.7.1",
-      "mongodb": "^3.2.3",
-      "nodemon": "^1.18.11",
-      "redux": "^4.0.1",
-      "style-loader": "^0.23.1"
+      "express": "^4.16.4",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.0.12",
+      "passport": "^0.4.0",
+      "passport-jwt": "^4.0.0",
+      "password-validator": "^4.1.1",
+      "validator": "^10.11.0"
+   },
+   "devDependencies": {
+      "nodemon": "^1.18.11"
    }
 }
